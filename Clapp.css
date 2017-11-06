@@ -1,0 +1,67 @@
+body {
+	background-image: url("index_background.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-color: black;
+	font-family: 'Roboto';
+}
+
+#container {
+	text-align: center;
+}
+
+#error-message {
+	visibility: hidden;
+}
+
+h1 {
+	font-size: 72px;
+	margin-top: 120px;
+	font-weight: 900;
+	font-style: bold;
+	color: white;
+}
+
+input[type="text"] {
+	line-height: 2em;
+	padding-left: 10px;
+	font-size: 18px;
+	border: none;
+	border-bottom: 1px solid gray;
+	transition: all 0.7s;
+}
+
+div {
+	margin: 10px 0;
+}
+
+input:focus {
+	outline: none;
+	border-bottom: 2px solid red;
+}
+
+#form {
+	width: 30%;
+	min-width: 320px;
+	margin: 0 auto;
+	background: white;
+	border-radius: 20px;
+	padding: 20px 5%;
+	box-sizing: border-box;
+	text-align: left;
+}
+
+button {
+	margin: 10px auto;
+	padding: 5px;
+	background: none;
+	border-radius: 5px;
+}
+
+#success-message {
+	visibility: hidden;
+	color: green;
+	font-style: bold;
+	font-size: 0.8em;
+	font-weight: 300;
+}

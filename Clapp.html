@@ -1,0 +1,55 @@
+<html>
+<head>
+	<title>Clapp! Kampusundeki Butun Etkinlikler Artık Bir Clapp! Uzaklikta!</title>
+</head>
+<link rel="stylesheet" type="text/css" href="Clapp.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300i,400,900" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<body>
+
+	<div id="container">
+		<h1>Clapp!</h1>
+		<div id="form">	
+			<input id="email-input" type="text" placeholder="E-mail">
+			<div id="error-message">Lütfen üniversite mailinizi girin!</div>
+			<div id="checkbox-container">
+				<div>
+				<input type="checkbox" value="parti"/>
+				<label for="parti">Parti</label>
+				</div>
+				<div>
+				<input type="checkbox" value="konferans"/>
+				<label for="konferans">Konferans</label> 
+				</div>
+				<div>
+				<input type="checkbox" value="workshop"/>
+				<label for="workshop">Workshop</label> 
+				</div>
+				<div>
+				<input type="checkbox" value="yarisma"/>
+				<label for="yarisma">Yarisma</label> 
+				</div>
+
+				<button>Takip Et!</button>
+				<div id="success-message">Listemize başarılı bir şekilde kaydoldunuz. Etkinliklerden haberdar olmak için gelen kutunuza bakmayı unutmayın :)</div>
+			</div>
+		</div>
+	</div>
+<script src="https://www.gstatic.com/firebasejs/4.6.1/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.6.0/firebase-database.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAxT10t9vw5V-0DOVrpCD4JV2x1PvoI7NM",
+    authDomain: "clapplandingpage.firebaseapp.com",
+    databaseURL: "https://clapplandingpage.firebaseio.com",
+    projectId: "clapplandingpage",
+    storageBucket: "",
+    messagingSenderId: "929689129370"
+  };
+  firebase.initializeApp(config);
+</script>
+<script type="text/javascript" src="Clapp.js"></script>
+</body>
+</html>
