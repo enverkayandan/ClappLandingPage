@@ -1,29 +1,36 @@
 body {
 	background-image: url("index_background.jpg");
-	background-size: 100%;
+	background-size: cover;
 	background-repeat: no-repeat;
 	background-color: black;
+}
+
+.container {
 	font-family: 'Roboto';
 }
 
-#container {
-	text-align: center;
-}
-
-#error-message {
-	visibility: hidden;
-}
-
-h1 {
-	font-size: 72px;
-	margin-top: 120px;
+#header {
+	font-size: 92px;
+	margin-top: 100px;
+	margin-bottom: 20px;
+	padding: 15px;
+	display: inline-block;
 	font-weight: 900;
-	font-style: bold;
 	color: white;
+	text-shadow: -10px 10px 24px #591923;
+	border: 5px solid white;
+	border-radius: 20px;
+	box-shadow: -10px 10px 36px #591923, inset -10px 10px 36px #591923;
+}
+
+.row, .col-xs-10, .col-md-4 {
+	text-align: center;
+	margin: 0 auto;
 }
 
 input[type="text"] {
 	line-height: 2em;
+	width: 100%;
 	padding-left: 10px;
 	font-size: 18px;
 	border: none;
@@ -31,13 +38,13 @@ input[type="text"] {
 	transition: all 0.7s;
 }
 
-div {
-	margin: 10px 0;
-}
-
 input:focus {
 	outline: none;
 	border-bottom: 2px solid red;
+}
+
+div {
+	margin: 10px 0;
 }
 
 #form {
@@ -48,20 +55,34 @@ input:focus {
 	border-radius: 20px;
 	padding: 20px 5%;
 	box-sizing: border-box;
+	text-align: center;
+}
+
+#checkbox-container {
 	text-align: left;
 }
 
 button {
 	margin: 10px auto;
 	padding: 5px;
+	display: inline-block;
 	background: none;
 	border-radius: 5px;
+	box-shadow: 1px 1px grey;
+}
+
+button:disabled {
+	box-shadow: inset 3px 3px grey;
 }
 
 #success-message {
 	visibility: hidden;
-	color: green;
+	color: #157700;
 	font-style: bold;
-	font-size: 0.8em;
 	font-weight: 300;
+}
+
+#error-message {
+	color: #ff0000;
+	visibility: hidden;
 }

@@ -2,42 +2,54 @@
 <head>
 	<title>Clapp! Kampusundeki Butun Etkinlikler Artık Bir Clapp! Uzaklikta!</title>
 </head>
-<link rel="stylesheet" type="text/css" href="Clapp.css">
 <link href="https://fonts.googleapis.com/css?family=Roboto:300i,400,900" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="Clapp.css">
 <body>
 
-	<div id="container">
-		<h1>Clapp!</h1>
-		<div id="form">	
-			<input id="email-input" type="text" placeholder="E-mail">
-			<div id="error-message">Lütfen üniversite mailinizi girin!</div>
-			<div id="checkbox-container">
-				<div>
-				<input type="checkbox" value="parti"/>
-				<label for="parti">Parti</label>
+<div class="container">
+	<div class="row">
+		<div class="col-xs-1 col-md-4"></div>
+		<div class="col-xs-10 col-md-4">
+			<h1 id="header">Clapp!</h1>
+			<div id="form">	
+				<input id="email-input" type="text" placeholder="E-mail">
+				<div id="checkbox-container">
+				<div id="error-message">Lütfen üniversite mailinizi girin!</div>
+					<div>
+					<input type="checkbox" value="parti"/>
+					<label for="parti">Parti</label>
+					</div>
+					<div>
+					<input type="checkbox" value="konferans"/>
+					<label for="konferans">Konferans</label> 
+					</div>
+					<div>
+					<input type="checkbox" value="workshop"/>
+					<label for="workshop">Workshop</label> 
+					</div>
+					<div>
+					<input type="checkbox" value="yarisma"/>
+					<label for="yarisma">Yarisma</label> 
+					</div>
 				</div>
-				<div>
-				<input type="checkbox" value="konferans"/>
-				<label for="konferans">Konferans</label> 
-				</div>
-				<div>
-				<input type="checkbox" value="workshop"/>
-				<label for="workshop">Workshop</label> 
-				</div>
-				<div>
-				<input type="checkbox" value="yarisma"/>
-				<label for="yarisma">Yarisma</label> 
-				</div>
-
 				<button>Takip Et!</button>
 				<div id="success-message">Listemize başarılı bir şekilde kaydoldunuz. Etkinliklerden haberdar olmak için gelen kutunuza bakmayı unutmayın :)</div>
 			</div>
 		</div>
+		<div class="col-xs-1 col-md-4"></div>
 	</div>
+</div>
 <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase.js"></script>
 <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase-database.js"></script>
+
+
+
+<script> $("#success-message").slideUp();
+		 $("#error-message").slideUp(); </script>
 <script>
   // Initialize Firebase
   var config = {
