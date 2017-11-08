@@ -4,6 +4,7 @@ var userEmail;
 var userUni;
 var extensions = [];
 var checkedboxes;
+var validEmail = false;
 
 db.ref("extensions").once("value").then(function(snapshot){
 	snapshot.forEach(function(childSnapshot){
@@ -25,6 +26,7 @@ db.ref("extensions").once("value").then(function(snapshot){
 
 		extensions.forEach(function(element){
 			if(userEmail.includes(element)){
+				validEmail = true;
 				var interests = [];
 				for(var x = 0 ; x < checkedboxes.length ; x++){
 					interests[x] = $(checkedboxes[x]).val();
@@ -33,10 +35,19 @@ db.ref("extensions").once("value").then(function(snapshot){
 					for(var i = 0 ; i < checkedboxes.length ; i++){
 						db.ref(userUni + "_" + $(checkedboxes[i]).val() + "/" + encodeEmail(userEmail)).set(1);
 					}
+					$("#error-message").slideUp();
 					$("#success-message").css("visibility", "visible");
+					$("#success-message").slideDown();
+					$("button").prop("disabled", true);
 				});
 			}
 		})
+
+		if(!validEmail){
+			$("input[type= 'text'").focus();
+			$("#error-message").css("visibility", "visible");
+			$("#error-message").slideDown();
+		}
 	});
 });
 
